@@ -1,0 +1,23 @@
+logging:
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}][%c{1}][%M][%level][%L][%msg]%n"
+
+server:
+  servlet:
+    context-path: "/api/v@project.version@"
+
+spring:
+  main:
+    banner-mode: off
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: "org.hibernate.dialect.H2Dialect"
+    hibernate:
+      ddl-auto: "create-drop"
+  datasource:
+    url: "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE"
+    driverClassName: "org.h2.Driver"
+    username: "test"
+    password: "test"
