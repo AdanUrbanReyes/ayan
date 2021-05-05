@@ -1,0 +1,12 @@
+server:
+  port: @server.port@
+  servlet:
+    context-path: "/api/v@project.version@"
+
+logging:
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}][%c{1}][%M][%level][%L][%msg]%n"
+
+spring:
+  main:
+    banner-mode: off

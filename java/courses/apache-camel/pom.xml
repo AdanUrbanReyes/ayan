@@ -9,29 +9,27 @@
         <relativePath/>
     </parent>
     <groupId>com.ayan.courses</groupId>
-    <artifactId>aspect-oriented-programming</artifactId>
+    <artifactId>apache-camel</artifactId>
     <version>1.0.0</version>
-    <name>aspect-oriented-programming</name>
-    <description>Testing how AOP works</description>
+    <name>apache-camel</name>
+    <description>Course of apache camel</description>
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.version>release</project.build.version>
+        <server.port>30000</server.port>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-spring-boot-starter</artifactId>
+            <version>3.9.0</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -56,6 +54,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
