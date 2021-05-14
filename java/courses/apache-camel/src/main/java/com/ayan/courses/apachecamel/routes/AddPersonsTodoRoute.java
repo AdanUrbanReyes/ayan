@@ -4,13 +4,13 @@ import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 //@Component
-public class FilesRoute extends RouteBuilder {
+public class AddPersonsTodoRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("file:files/input")
-                //.bean(LogProcessor.class)
-                .to("file:files/output");
+        from("direct:addPersonsTodo")
+                .log("Adding to do to ${body}")
+                .to("https://jsonplaceholder.typicode.com/todos");
     }
 
 }
