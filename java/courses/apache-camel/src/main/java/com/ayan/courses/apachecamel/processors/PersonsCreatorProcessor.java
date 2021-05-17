@@ -15,7 +15,6 @@ public class PersonsCreatorProcessor implements Processor {
     private static final Random RANDOM = new Random();
     private static final byte MIN_AGE = 0;
     private static final byte MAX_AGE = 100;
-    private static final byte MAX_FULL_NAME_LENGTH = 30;
     private static final String[] DUMMY_FULL_NAMES = new String[]{
             "Paddy O’Furniture",
             "Olive Yew",
