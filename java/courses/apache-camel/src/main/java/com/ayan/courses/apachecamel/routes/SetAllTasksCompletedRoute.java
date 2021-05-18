@@ -16,6 +16,8 @@ public class SetAllTasksCompletedRoute extends RouteBuilder {
                     exchange.getMessage().setBody(e.getTasks());
                 })
                 .split(body())
+                .choice()
+                .when().simple("${body.status} != 'COMPLETED'")
                 .log("Setting ${body} completed")
                 .bean(SetCompletedTaskProcessor.class)
                 .log("${body}")
