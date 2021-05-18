@@ -17,7 +17,7 @@ public class PersonsHirerRouter extends RouteBuilder {
                 .log("Hiring ${header.id} ${body}")
                 .enrich("direct:todo", hiredPersonTodoAggregationStrategy)
                 .log("Sending new created employee ${body}")
-                .end();
+                .to("direct:setAllTasksCompleted");
     }
 
 }
