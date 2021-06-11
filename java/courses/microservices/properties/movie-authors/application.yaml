@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /api/v1.0.0
+
+spring:
+  application:
+    name: movie-authors

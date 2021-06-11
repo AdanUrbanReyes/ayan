@@ -1,0 +1,13 @@
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+feignClient:
+  movieInformation:
+    name: movie-information
+    url: "/api/v1.0.0/movies"
+  movieAuthors:
+    name: movie-authors
+    url: "/api/v1.0.0/movies"

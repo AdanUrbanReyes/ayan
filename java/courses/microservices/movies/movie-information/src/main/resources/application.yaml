@@ -1,0 +1,16 @@
+logging:
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}][%c{1}][%M][%level][%L][%msg]%n"
+
+server:
+  port: @server.port@
+  servlet:
+    context-path: /api/v@project.version@
+
+spring:
+  application:
+    name: movie-information
+  main:
+    banner-mode: off
+  profiles:
+    active: @spring.profiles.active@

@@ -1,0 +1,19 @@
+logging:
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}][%c{1}][%M][%level][%L][%msg]%n"
+
+server:
+  port: @server.port@
+
+spring:
+  application:
+    name: eureka-server
+  main:
+    banner-mode: off
+  profiles:
+    active: @spring.profiles.active@
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
