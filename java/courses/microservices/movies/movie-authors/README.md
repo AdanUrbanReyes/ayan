@@ -9,6 +9,7 @@ for a particularly movie.
 2. Maven 3.8.1 or greater
 3. eureka-server
 4. config-server
+5. spring cloud config server
 
 ## Building
 

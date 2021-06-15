@@ -1,7 +1,12 @@
-server:
-  servlet:
-    context-path: /api/v1.0.0
+logging:
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}][%c{1}][%M][%level][%L][%msg]%n"
 
 spring:
-  application:
-    name: movie-authors
+  main:
+    banner-mode: off
+
+server:
+  port: {server.port}
+  servlet:
+    context-path: /api/v{project.version}

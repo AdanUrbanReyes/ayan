@@ -8,6 +8,6 @@ spring:
         git:
           uri: "https://github.com/AdanUrbanReyes/ayan.git"
           searchPaths: 'java/courses/microservices/properties/{application}'
-          username: username
-          password: password
+          username: adanurbanreyes@gmail.com
+          password: A1y3a1n7?
           skipSslValidation: true
