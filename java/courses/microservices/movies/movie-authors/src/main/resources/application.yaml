@@ -1,7 +1,7 @@
 server:
-  port: ${server.port}
+  port: @server.port@
   servlet:
-    context-path: /api/v${project.version}
+    context-path: /api/v@project.version@
 
 spring:
   application:
