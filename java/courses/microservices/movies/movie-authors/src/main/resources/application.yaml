@@ -1,3 +1,8 @@
+server:
+  port: ${server.port}
+  servlet:
+    context-path: /api/v${project.version}
+
 spring:
   application:
     name: movie-authors

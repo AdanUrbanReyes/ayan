@@ -10,6 +10,7 @@ Microservice in charge of merge movie information and movie authors, for then re
 4. config-server
 5. movie-information microservice
 6. movie-authors microservice
+7. spring cloud config server
 
 ## Building
 
