@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Set;
 
-@FeignClient(name = "${feignClient.movieInformation.name}"
-        , path = "${feignClient.movieInformation.url}")
+@FeignClient(name = "movie-information"
+        , path = "${feign.client.config.movie-information.url}")
 public interface MovieInformationFeignClient {
 
     @RequestMapping(method = RequestMethod.GET)

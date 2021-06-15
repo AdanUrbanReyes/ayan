@@ -1,13 +1,17 @@
 logging:
   level:
-    org:
+    org:feign
       springframework:
         web: DEBUG
 
-feignClient:
-  movieInformation:
-    name: movie-information
-    url: "/api/v1.0.0/movies"
-  movieAuthors:
-    name: movie-authors
-    url: "/api/v1.0.0/movies"
+feign:
+  client:
+    config:
+      movie-information:
+        url: "/api/v1.0.0/movies"
+        connectTimeout: 3000
+        readTimeout: 6000
+      movie-authors:
+        url: "/api/v1.0.0/movies"
+        connectTimeout: 3000
+        readTimeout: 6000

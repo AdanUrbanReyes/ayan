@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Set;
 
-@FeignClient(name = "${feignClient.movieAuthors.name}"
-        , path = "${feignClient.movieAuthors.url}")
+@FeignClient(name = "movie-authors"
+        , path = "${feign.client.config.movie-authors.url}")
 public interface MovieAuthorsFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "{movieId}/authors")
