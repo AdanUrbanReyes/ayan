@@ -1,6 +1,6 @@
 logging:
   level:
-    org:feign
+    org:
       springframework:
         web: DEBUG
 
