@@ -1,0 +1,15 @@
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+resilience4j:
+  bulkhead:
+    configs:
+      default:
+        maxConcurrentCalls: 2
+        maxWaitDuration: 0
+    instances:
+      greetingBulkhead:
+        baseConfig: default
