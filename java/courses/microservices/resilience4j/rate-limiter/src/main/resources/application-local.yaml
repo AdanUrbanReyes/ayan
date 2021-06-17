@@ -1,0 +1,16 @@
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+resilience4j:
+  ratelimiter:
+    configs:
+      default:
+        limitForPeriod: 1
+        limitRefreshPeriod: 3s
+        timeoutDuration: 0
+    instances:
+      greetingRateLimit:
+        baseConfig: default
