@@ -1,0 +1,25 @@
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+feign:
+  client:
+    config:
+      greeting:
+        url: "http://localhost:33001/api/v1.0.0/greeting"
+        connectTimeout: 3000
+        readTimeout: 6000
+
+resilience4j:
+  retry:
+    configs:
+      default:
+        maxAttempts: 2
+        waitDuration: 2000ms
+        retryExceptions:
+          - feign.FeignException
+    instances:
+      greetingRetry:
+        baseConfig: default
