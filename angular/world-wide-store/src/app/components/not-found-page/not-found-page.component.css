@@ -1,0 +1,18 @@
+div.not-found-page p {
+    font-size: 9vw;
+    text-transform: uppercase;
+}
+
+div.not-found-page ul {
+    width: 100%;
+    margin-top: 11px;
+    list-style: none;
+}
+
+div.not-found-page li>a {
+    color: #916344;
+    font-weight: 600;
+    padding: 0 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}

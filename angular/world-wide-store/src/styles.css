@@ -1,1 +1,253 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.percent-full-size {
+    height: 100%;
+    width: 100%;
+}
+
+.flex-row-nowrap-center-center {
+    -moz-flex-direction: row;
+    -moz-flex-wrap: nowrap;
+    -moz-justify-content: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.flex-row-wrap-center-center {
+    -moz-flex-direction: row;
+    -moz-flex-wrap: wrap;
+    -moz-justify-content: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-column-nowrap-center-center {
+    -moz-flex-direction: column;
+    -moz-flex-wrap: nowrap;
+    -moz-justify-content: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.flex-column-wrap-center-center {
+    -moz-flex-direction: column;
+    -moz-flex-wrap: wrap;
+    -moz-justify-content: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button.create,
+a.create,
+label.create {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+button.read,
+a.read,
+label.read {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+button.update,
+a.update,
+label.update {
+    background-color: #008CBA;
+    color: #ffffff;
+}
+
+button.delete,
+a.delete,
+label.delete {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+div.actions {
+    -moz-flex-direction: row;
+    -moz-flex-wrap: wrap;
+    -moz-justify-content: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 11px;
+    justify-content: center;
+    width: 100%;
+}
+
+.box-with-title {
+    border: 1px solid #5f3fb1;
+    padding: 17px 0;
+    position: relative;
+}
+
+.box-with-title h3:first-child {
+    background-color: #ffffff;
+    color: #1B8198;
+    font-weight: 500;
+    left: 17px;
+    position: absolute;
+    top: -11px;
+}
+
+form {
+    -moz-flex-direction: row;
+    -moz-flex-wrap: wrap;
+    -moz-justify-content: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 17px;
+    height: 100%;
+    justify-content: center;
+    padding: 11px;
+    width: 100%;
+}
+
+div.table div.controls {
+    -moz-flex-direction: row;
+    -moz-flex-wrap: wrap;
+    -moz-justify-content: space-between;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+table.mat-table {
+    width: 100%;
+}
+
+table.mat-table td.mat-cell>span {
+    display: none;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #E8F0DD;
+}
+
+thead tr:first-child {
+    background-color: #0b2343;
+}
+
+thead tr:first-child * {
+    color: #ffffff;
+}
+
+table.mat-table td>button {
+    margin: 7px;
+}
+
+.dialog {
+    max-width: 90%;
+    max-height: 90vh;
+    overflow: scroll;
+}
+
+@media screen and (max-width: 425px) {
+    div.actions {
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    div.actions button,
+    div.actions label.mat-raised-button {
+        width: 100%;
+    }
+    .dialog .mat-dialog-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    div.table div.controls>* {
+        width: 100%;
+    }
+}
