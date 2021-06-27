@@ -1,0 +1,8 @@
+<div class="advertisement flex-column-wrap-center-center">
+    <h3>{{ data.title ? data.title : 'Advertisement' }}</h3>
+    <p>{{ data.message ? data.message : '' }}</p>
+    <button mat-raised-button class="update" (click)="continue()">
+        <mat-icon>navigate_next</mat-icon>
+        {{data.continueText ? data.continueText : 'Continue'}}
+    </button>
+</div>

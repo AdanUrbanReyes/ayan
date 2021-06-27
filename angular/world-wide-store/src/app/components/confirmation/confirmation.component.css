@@ -1,0 +1,11 @@
+div.confirmation {
+    gap: 17px;
+    width: 100%;
+}
+
+div.confirmation>p {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}

@@ -1,0 +1,13 @@
+<div class="confirmation flex-column-wrap-center-center">
+    <p>{{ data.message ? data.message : 'Is everything OK?' }}</p>
+    <div class="actions">
+        <button mat-raised-button class="create" (click)="yes()">
+			<mat-icon>check</mat-icon>
+			{{data.yesText ? data.yesText : 'Yes'}}
+		</button>
+        <button mat-raised-button class="delete" (click)="not()">
+			<mat-icon>clear</mat-icon>
+			{{data.notText ? data.notText : 'Not'}}
+		</button>
+    </div>
+</div>

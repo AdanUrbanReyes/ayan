@@ -1,0 +1,19 @@
+div.advertisement {
+    gap: 17px;
+    width: 100%;
+}
+
+div.advertisement>h3 {
+    color: #C8AA01;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+div.advertisement>p {
+    font-style: italic;
+    text-align: left;
+    width: 100%;
+    word-break: break-word;
+}
