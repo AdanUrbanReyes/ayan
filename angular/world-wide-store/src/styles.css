@@ -16,8 +16,8 @@ body {
 }
 
 body {
-    margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
 }
 
 .percent-full-size {
@@ -251,3 +251,5 @@ table.mat-table td>button {
         width: 100%;
     }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
