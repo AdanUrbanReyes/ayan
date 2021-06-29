@@ -16,6 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 const COMPONENTS=[
   MatButtonModule
@@ -34,6 +35,7 @@ const COMPONENTS=[
   , MatSortModule
   , MatPaginatorModule
   , MatBottomSheetModule
+  , MatAutocompleteModule
 ];
 
 export const MY_FORMATS = {

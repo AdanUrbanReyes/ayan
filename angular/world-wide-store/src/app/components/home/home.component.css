@@ -1,0 +1,112 @@
+.mat-toolbar {
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    background-color: #E9F1F2;
+    justify-content: space-between;
+}
+
+.mat-toolbar * {
+    color: #182847;
+}
+
+div.logo>span {
+    border-left: 2px solid #182847;
+    margin-left: 7px;
+    padding-left: 7px;
+}
+
+form.searchForm{
+    width: 50%;
+}
+
+form.searchForm input{
+    background-color: transparent;
+    border: 1px solid #182847;
+    height: 100%;
+    outline: none;
+    padding: 0 11px;
+    width: 100%;
+}
+
+div.current-location .mat-icon{
+    font-size: xx-large;
+    height: 100%;
+    width: auto;
+}
+
+div.current-location p{
+    font-size: x-small; 
+    line-height: normal;
+}
+
+.mat-toolbar>div>span {
+    border-left: 2px solid #182847;
+    margin-left: 7px;
+    padding-left: 7px;
+}
+
+.mat-drawer-container {
+    min-height: -moz-calc(100% - 64px);
+    min-height: -webkit-calc(100% - 64px);
+    min-height: calc(100% - 64px);
+}
+
+.mat-drawer {
+    background-color: #182847;
+    min-width: 177px;
+}
+
+.mat-drawer ul li button {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: #E9F1F2;
+    font-size: large;
+    font-weight: 300;
+    padding: 11px 0;
+    width: 100%;
+}
+
+.mat-drawer ul li button .mat-icon {
+    margin-right: 11px;
+    vertical-align: middle;
+}
+
+.mat-drawer-content {
+    padding: 31px 37px;
+}
+
+@media screen and (max-width: 768px) {
+    .mat-toolbar {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    div.logo {
+        -moz-order: 1;
+        -webkit-order: 1;
+        order: 1;
+        width: 100%;
+    }
+    form.searchForm{
+        -moz-order: 2;
+        -webkit-order: 2;
+        order: 2;
+        width: 100%;
+    }
+    button.menu{
+        -moz-order: 3;
+        -webkit-order: 3;
+        order: 3;        
+    }
+    div.current-location{
+        -moz-order: 4;
+        -webkit-order: 4;
+        order: 4;
+    }
+    div.profile{
+        -moz-order: 5;
+        -webkit-order: 5;
+        order: 5;
+    }
+}

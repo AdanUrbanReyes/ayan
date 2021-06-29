@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AdvertisementComponent } from './components/advertisement/advertisement.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +26,8 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     , AppRoutingModule
     , BrowserAnimationsModule
     , MaterialModule
+    , FormsModule
+    , ReactiveFormsModule
   ]
   , providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }

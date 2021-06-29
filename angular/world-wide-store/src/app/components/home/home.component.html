@@ -1,1 +1,49 @@
-<p>home works!</p>
+<loading></loading>
+<mat-toolbar>
+    <button class="menu" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div class="flex-row-nowrap-center-center logo">
+        <img src="assets/img/shoppingBag.svg" alt="Logo" title="Logo" height="23" />
+        <span>World Wide Store</span>
+    </div>
+    <form class="searchForm" [formGroup]="searchForm" (submit)="search()">
+        <input type="text" placeholder="Buscar un producto..." formControlName="searchString" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let s of filteredOptions | async" [value]="s">
+                {{s}}
+            </mat-option>
+        </mat-autocomplete>
+    </form>
+    <div class="flex-row-nowrap-center-center current-location">
+        <mat-icon>person_pin_circle</mat-icon>
+        <p>
+            Zapopan
+            <br/>Guadalajara Jalisco
+            <br/>Mexico
+        </p>
+    </div>
+    <div class="flex-row-nowrap-center-center profile">
+        <button mat-button [matMenuTriggerFor]="profile">
+            <img src="assets/img/user.svg" alt="Profile" title="Profile" width="37" height="37"/>
+        </button>
+        <mat-menu #profile="matMenu" xPosition="after">
+            <h2>My Profile</h2>
+        </mat-menu>
+    </div>
+</mat-toolbar>
+<mat-drawer-container hasBackdrop="true">
+    <mat-drawer #drawer mode="push">
+        <ul>
+            <li *ngFor="let m of menus">
+                <button mat-button [routerLink]="[m.route]" (click)="drawer.toggle()">
+                    <mat-icon>{{m.image}}</mat-icon>
+                    {{m.title}}
+                </button>
+            </li>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
